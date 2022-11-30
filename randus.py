@@ -19,8 +19,15 @@ from machine import Pin
 import random
 
 l=[]
-for x in range(1000):
-    l.append(random.randint(0,1))
+y = 0
+for x in range(10000):
+    if y == 0:
+        l.append(1025)
+    elif y == 1:
+        l.append(258)
+    else:
+        l.append(random.randint(0,1024))
+    y += 1
 #print(l)
 
 def make_tone(rate, bits, frequency):
@@ -29,6 +36,8 @@ def make_tone(rate, bits, frequency):
     sample_size_in_bytes = bits // 8
     samples = bytearray(samples_per_cycle * sample_size_in_bytes)
     samples = bytearray(l)
+    print(str(samples[0]), str(samples[1]))
+    print(samples)
     volume_reduction_factor = 1
     range1 = pow(2, bits) // 2 // volume_reduction_factor
     
