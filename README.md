@@ -1,6 +1,8 @@
 # Nexus9000
 A quantum computer based waveform generating synth on an oscillator engine
 
+created by FairFox™
+
 ┼┼┼┼┼┼┼████
 ┼┼┼┼┼┼██████
 ┼┼┼┼┼████████
